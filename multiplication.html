@@ -1,0 +1,88 @@
+<html lang="pl">
+<head>
+    <style>
+
+        #scoreboard-widget, #scoreboard-widget td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #scoreboard-widget td.perc-0 { background-color: #e70c01; }
+        #scoreboard-widget td.perc-10 { background-color: #f50500; }
+        #scoreboard-widget td.perc-20 { background-color: #c81c02; }
+        #scoreboard-widget td.perc-30 { background-color: #a12e03; }
+        #scoreboard-widget td.perc-40 { background-color: #7b4205; }
+        #scoreboard-widget td.perc-50 { background-color: #6d4805; }
+        #scoreboard-widget td.perc-60 { background-color: #545406; }
+        #scoreboard-widget td.perc-70 { background-color: #396107; }
+        #scoreboard-widget td.perc-80 { background-color: #177309; }
+        #scoreboard-widget td.perc-90 { background-color: #00ff00; }
+        #scoreboard-widget td.perc-100 { background-color: #00ff00; }
+
+        #scoreboard-widget td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        #container {
+            margin: auto;
+            margin-top: 5em;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: : wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 90%;
+        }
+
+        #question, #answer-box, #check-button, #result-message {
+            /*border: 1px solid red;*/
+        }
+
+        #question {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        #answer-box {
+            width: 25%;
+            height: 150px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        #check-button {
+            width: 25%;
+            height: 150px;
+            font-size: 2em;
+        }
+
+        #result-message {
+            font-size: 2em;
+        }
+
+        #result-message.result-incorrect {
+            color: red;
+        }
+
+        #result-message.result-correct {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        (function() {
+            let now = Date.now();
+            let script = document.createElement("script");
+            script.setAttribute("src", "./dist/multiplication-bundle.js?time=" + now);
+            document.getElementsByTagName("head")[0].append(script);
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "name": "math-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "dev": "npm run webpack -- --mode development --watch",
+    "prod": "npm run webpack -- --mode production",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mklepaczewski/math-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mklepaczewski/math-exercises/issues"
+  },
+  "homepage": "https://github.com/mklepaczewski/math-exercises#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@types/react": "^17.0.30",
+    "@types/react-dom": "^17.0.9",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.6.0",
+    "eslint": "^7",
+    "eslint-config-prettier": "^7",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "prettier": "^2.4.1",
+    "source-map-loader": "^3.0.1",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-toastify": "^8.1.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
